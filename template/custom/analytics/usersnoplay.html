@@ -1,0 +1,40 @@
+{% extends "custom/analytics/base-analytics.html" %}
+
+{% block content %}
+
+<div class="contentbg" style="margin: 0; padding: 0; width: 100%">
+		<div class="post">
+			<h2 class="title">Players who have not played in the tournament</h2>
+   
+		    
+		    	{% if scores %}
+							{% for score in scores %}
+									{% if score.loser_questions = 0 %}
+										{% if score.winner_questions  = 0 %}
+											<h4><li> {{score.profile.user.username}}</li></h4>
+									
+									    
+										{% endif %}
+									{% endif %}
+							{% endfor %}
+						{% endif %}
+		    
+		    <div id="container" style="width: 100%; height: 500px; margin: 0 auto"></div>
+		 
+		  
+		    
+			<center><div style="clear: both;">&nbsp;</div>
+				<fieldset class="ui-grid-b" data-theme="b">
+						<div class="ui-block-a"></div>
+						<div class="ui-block-b"><a href="/next-games"><button data-theme="b">Go to fleq!</button></a></div>
+						<div class="ui-block-c"></div>
+				</fieldset>
+			</center>
+ 
+			</div>
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	
+
+{% endblock %}
+

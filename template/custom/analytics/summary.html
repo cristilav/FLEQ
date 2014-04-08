@@ -1,0 +1,68 @@
+{% extends "custom/analytics/base-analytics.html" %}
+
+
+{% block content %}
+
+<div class="contentbg" style="margin: 0; padding: 0; width: 550px">
+		<div class="post">
+			<h2 class="title">Summary</h2>
+			
+			<!--<div align="center"> <div id="preview" style= "BORDER-RIGHT: #000 1px solid;  PADDING-RIGHT: 0px; BORDER-TOP: #000 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; WORD-SPACING: 1px;  BORDER-LEFT: #000 1px solid; WIDTH: 580px; PADDING-TOP: 1px; BORDER-BOTTOM: #000 2px solid; HEIGHT: 400px; TEXT-ALIGN: left"> <p>  <dd><li><h4>Torneo: {{tournament}}</h4></li></dd>
+			
+			
+			<dd><li><h4>Número de jugadores: {{personas_por_ronda}}</h1></li></h4></dd>
+			<dd><li><h4>Número de rondas: {{numrondas}}</h4></li>
+			<dd><li><h4>Número de partidas por ronda: {{partidas_por_ronda}}</h4></li></dd>
+			<dd><li><h4>Número de partidas totales: {{partidas}}</h4></li></dd>
+			<dd><li><h4>Número de ausencias de jugadores en partidas: {{ausencias}} de {{ausenciasposibles}} posibles</h1></li></h4><dd>
+			<dd><li><h4>Número de categorias: {{numcategories}}</h4></li></dd>
+			<dd><li><h4>Categorias: {% for n in categorias %}
+			    		<b>{{n}} ,</b>
+			    {% endfor %}</h4></li></dd>
+			
+			<dd><li><h4>Número de preguntas efectuadas en el torneo: {{numpregpartida}}</h4></li></dd>
+			<dd><li><h4>Número de preguntas acertadas: {{numpreguntas}}</h4></li>
+					 </p> </div></div>
+
+
+			<dd><h4>  </h4></dd> -->
+			
+			<table border=1 bordercolor="silver" bgcolor="#EFF2FB"><td><font color="black"><dd><li><h4>Tournament: {{tournament}}</h4></li></dd>
+			
+			
+			<dd><li><h4>Number of players: {{personas_por_ronda}}</h1></li></h4></dd>
+			<dd><li><h4>Number of rounds: {{numrondas}}</h4></li>
+			<dd><li><h4>Number of games per round: {{partidas_por_ronda}}</h4></li></dd>
+			<dd><li><h4>Total number of games: {{partidas}}</h4></li></dd>
+			<dd><li><h4>Percentage of absences of players: {{resultado}} %</h1></li></h4><dd>
+			<dd><li><h4>Number of categories: {{numcategories}}</h4></li></dd>
+			<dd><li><h4>Categories: -{% for n in categorias %}
+			    		<b>{{n}} -</b>
+			    {% endfor %}</h4></li></dd>
+			
+			<dd><li><h4>Number of questions asked in the tournament: {{numpregpartida}}</h4></li></dd>
+			<dd><li><h4>Number of correct questions: {{numpreguntas}}</h4></li></dd>
+		    <dd><li><h4>Percentage of correct questions: {{resultado1}} %</h1></li></h4></dd>
+		    </p> </div></div>
+
+			
+		
+
+		    <div id="container" style="width: 580px; height: 40px; margin: 0 auto"></div>
+		    
+			<dd><h4>  </h4></dd></font></td></table>
+				
+			<center><div style="clear: both;">&nbsp;</div>
+				<fieldset class="ui-grid-b" data-theme="b">
+						<div class="ui-block-a"></div>
+						<div class="ui-block-b"><a href="/next-games"><button data-theme="b">Go back!</button></a></div>
+						<div class="ui-block-c"></div>
+				</fieldset>
+			</center>
+ 
+			</div>
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	
+
+{% endblock %}
